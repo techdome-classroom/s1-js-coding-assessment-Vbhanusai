@@ -2,7 +2,6 @@ const getTotalIsles = function (grid) {
 
 
   // write your code here
-  function numIslands(grid) {
     if (grid.length === 0) return 0;
     
     const rows = grid.length;
