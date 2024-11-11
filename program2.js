@@ -5,7 +5,6 @@ const decodeTheRing = function (s, p) {
   const dpTable = Array.from({ length: msgLen + 1 }, () => Array(patLen + 1).fill(false));
 
   dpTable[0][0] = true;
-
   for (let col = 1; col <= patLen; col++) {
     if (p[col - 1] === '*') dpTable[0][col] = dpTable[0][col - 1];
   }
