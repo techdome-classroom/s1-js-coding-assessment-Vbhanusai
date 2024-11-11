@@ -1,7 +1,7 @@
 const decodeTheRing = function (s, p) {
 
   // write your code here
-  const msgLen = message.length, patLen = pattern.length;
+  const msgLen = s.length, patLen = pattern.length;
   const dpTable = Array.from({ length: msgLen + 1 }, () => Array(patLen + 1).fill(false));
 
   dpTable[0][0] = true;
@@ -17,7 +17,7 @@ const decodeTheRing = function (s, p) {
       } else if (pattern[col - 1] === '?') {
         dpTable[row][col] = dpTable[row - 1][col - 1];
       } else {
-        dpTable[row][col] = dpTable[row - 1][col - 1] && message[row - 1] === pattern[col - 1];
+        dpTable[row][col] = dpTable[row - 1][col - 1] && s[row - 1] === pattern[col - 1];
       }
     }
   }
