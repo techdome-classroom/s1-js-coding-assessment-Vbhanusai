@@ -1,7 +1,6 @@
 const decodeTheRing = function (s, p) {
 
     // write your code here
-    function decodeMessage(message, pattern) {
       const msgLen = message.length, patLen = pattern.length;
       const dpTable = Array.from({ length: msgLen + 1 }, () => Array(patLen + 1).fill(false));
       
